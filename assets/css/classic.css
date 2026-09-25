@@ -159,6 +159,22 @@ body.classicmode .portfolio-tab.is-active {
   border-bottom-color: var(--classic-accent);
 }
 
+body.classicmode .portfolio-dropdown-menu {
+  background: var(--classic-surface);
+  border-color: var(--classic-border);
+}
+
+body.classicmode .portfolio-dropdown-menu .portfolio-tab {
+  color: var(--classic-text);
+  border-bottom-color: var(--classic-border);
+}
+
+body.classicmode .portfolio-dropdown-menu .portfolio-tab:hover,
+body.classicmode .portfolio-dropdown-menu .portfolio-tab:focus-visible {
+  background: var(--classic-primary);
+  color: #ffffff;
+}
+
 body.classicmode .portfolio-arrow {
   border-color: var(--classic-border);
   color: var(--classic-text);

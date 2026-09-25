@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-i18n="page.portfolioTitle">Portfolio - JuanGamerPlayz</title>
 	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/portfolio.css">
 	<link rel="stylesheet" href="../assets/css/language.css">
 	<link rel="stylesheet" href="../assets/css/classic.css">
 	<link rel="stylesheet" href="../assets/css/theme.css">
@@ -14,15 +15,20 @@
 			<section class="portfolio-box" aria-label="Portfolio categories" data-i18n="accessibility.portfolioCategories" data-i18n-attr="aria-label">
 				<h1 data-i18n="portfolio.title">Portfolio</h1>
 				<div class="portfolio-tabs" role="tablist" aria-label="Portfolio type" data-i18n="accessibility.portfolioType" data-i18n-attr="aria-label">
-					<button class="portfolio-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="community-management" id="community-tab" data-portfolio-tab="community-management" data-i18n="portfolio.tabs.community">Community Management</button>
-					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="roblox-projects" id="roblox-tab" data-portfolio-tab="roblox-projects" data-i18n="portfolio.tabs.roblox">Roblox Projects</button>
-					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="qa" id="qa-tab" data-portfolio-tab="qa" data-i18n="portfolio.tabs.qa">QA</button>
-					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="ui-ux" id="ui-ux-tab" data-portfolio-tab="ui-ux" data-i18n="portfolio.tabs.uiux">UI/UX</button>
+					<button class="portfolio-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="roblox-projects" id="roblox-tab" data-portfolio-tab="roblox-projects" data-i18n="portfolio.tabs.roblox">Roblox Projects</button>
 					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-art" id="concept-art-tab" data-portfolio-tab="concept-art" data-i18n="portfolio.tabs.conceptArt">Concept Art</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="ui-ux" id="ui-ux-tab" data-portfolio-tab="ui-ux" data-i18n="portfolio.tabs.uiux">UI/UX</button>
 					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="3d-art" id="3d-art-tab" data-portfolio-tab="3d-art" data-i18n="portfolio.tabs.art3d">3D Art</button>
+					<div class="portfolio-dropdown" data-portfolio-dropdown>
+						<button class="portfolio-tab portfolio-dropdown-toggle" type="button" aria-expanded="false" aria-controls="portfolio-dropdown-menu" id="more-tab" data-i18n="portfolio.tabs.more">More</button>
+						<div class="portfolio-dropdown-menu" id="portfolio-dropdown-menu" role="menu" aria-labelledby="more-tab" hidden>
+							<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="community-management" id="community-tab" data-portfolio-tab="community-management" data-i18n="portfolio.tabs.community">Community Management</button>
+							<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="qa" id="qa-tab" data-portfolio-tab="qa" data-i18n="portfolio.tabs.qa">QA</button>
+						</div>
+					</div>
 				</div>
 
-				<section id="community-management" class="portfolio-panel" role="tabpanel" aria-labelledby="community-tab" data-portfolio-panel="community-management">
+				<section id="community-management" class="portfolio-panel" role="tabpanel" aria-labelledby="community-tab" data-portfolio-panel="community-management" hidden>
 					<div class="portfolio-carousel" data-portfolio-carousel>
 						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
 						<div class="portfolio-grid">
@@ -46,7 +52,7 @@
 					</div>
 				</section>
 
-				<section id="roblox-projects" class="portfolio-panel" role="tabpanel" aria-labelledby="roblox-tab" data-portfolio-panel="roblox-projects" hidden>
+				<section id="roblox-projects" class="portfolio-panel" role="tabpanel" aria-labelledby="roblox-tab" data-portfolio-panel="roblox-projects">
 					<div class="portfolio-carousel" data-portfolio-carousel>
 						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
 						<div class="portfolio-grid">

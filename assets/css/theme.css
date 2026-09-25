@@ -106,3 +106,27 @@ body.darktheme:not(.classicmode) {
   --modal-border: var(--dark-border);
   --modal-backdrop: rgba(0, 0, 0, 0.5);
 }
+
+body.darktheme:not(.classicmode) .portfolio-tab {
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-tab.is-active {
+  border-bottom-color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-dropdown-menu {
+  background: var(--dark-surface);
+  border-color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-dropdown-menu .portfolio-tab {
+  color: var(--dark-page-text);
+  border-bottom-color: var(--dark-border);
+}
+
+body.darktheme:not(.classicmode) .portfolio-dropdown-menu .portfolio-tab:hover,
+body.darktheme:not(.classicmode) .portfolio-dropdown-menu .portfolio-tab:focus-visible {
+  background: var(--dark-page-text);
+  color: var(--dark-page-bg);
+}

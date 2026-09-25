@@ -56,6 +56,49 @@ portfolioTabs.forEach((tab) => {
 
     const selectedPanel = document.querySelector(`[data-portfolio-panel="${selectedCategory}"]`);
     updateCarouselButtons(selectedPanel.querySelector("[data-portfolio-carousel]"));
+
+    portfolioDropdowns.forEach((dropdown) => {
+      dropdown.removeAttribute("open");
+      const toggle = dropdown.querySelector(".portfolio-dropdown-toggle");
+      const menu = dropdown.querySelector(".portfolio-dropdown-menu");
+      toggle.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    });
+  });
+});
+
+const portfolioDropdowns = document.querySelectorAll("[data-portfolio-dropdown]");
+
+portfolioDropdowns.forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".portfolio-dropdown-toggle");
+  const menu = dropdown.querySelector(".portfolio-dropdown-menu");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.hasAttribute("open");
+    dropdown.toggleAttribute("open", !isOpen);
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    menu.hidden = isOpen;
+  });
+
+  menu.querySelectorAll("[data-portfolio-tab]").forEach((item) => {
+    item.addEventListener("click", () => {
+      dropdown.removeAttribute("open");
+      toggle.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    });
+  });
+});
+
+document.addEventListener("click", (e) => {
+  portfolioDropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.removeAttribute("open");
+      const toggle = dropdown.querySelector(".portfolio-dropdown-toggle");
+      const menu = dropdown.querySelector(".portfolio-dropdown-menu");
+      toggle.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    }
   });
 });
 
