@@ -1,0 +1,108 @@
+:root {
+  --light-page-bg: #F1EFEC;
+  --light-page-text: #030303;
+  --dark-page-bg: #101010;
+  --dark-page-text: #F1EFEC;
+  --dark-surface: #181818;
+  --dark-border: #3a3a3a;
+}
+
+.color-theme-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 32px;
+  min-width: 42px;
+  min-height: 32px;
+  padding: 0;
+  border: 1px solid var(--nav-control-border);
+  border-radius: 6px;
+  background: var(--nav-control-bg);
+  color: #F1EFEC;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.color-theme-button:hover,
+.color-theme-button:focus-visible {
+  background: var(--nav-control-hover);
+}
+
+.color-theme-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+.color-theme-icon--sun {
+  display: none;
+}
+
+body.darktheme:not(.classicmode) {
+  background: var(--dark-page-bg);
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) a {
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-box,
+body.darktheme:not(.classicmode) .portfolio-item,
+body.darktheme:not(.classicmode) .portfolio-preview {
+  border-color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-tab {
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-tab.is-active {
+  border-bottom-color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-arrow {
+  border-color: var(--dark-page-text);
+  background: var(--dark-surface);
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .portfolio-arrow-icon--modern {
+  filter: invert(1);
+}
+
+body.darktheme:not(.classicmode) .portfolio-arrow:hover:not(:disabled) .portfolio-arrow-icon--modern,
+body.darktheme:not(.classicmode) .portfolio-arrow:focus-visible:not(:disabled) .portfolio-arrow-icon--modern {
+  filter: invert(1);
+}
+
+body.darktheme:not(.classicmode) .universal-play-button {
+  border-color: var(--dark-page-text);
+  background: var(--dark-page-text);
+  color: var(--dark-page-bg);
+}
+
+body.darktheme:not(.classicmode) footer {
+  background: #030303;
+  color: var(--dark-page-text);
+}
+
+body.darktheme:not(.classicmode) .color-theme-icon--sun {
+  display: block;
+}
+
+body.darktheme:not(.classicmode) .color-theme-icon--moon {
+  display: none;
+}
+
+body.darktheme:not(.classicmode) {
+  --modal-bg: var(--dark-surface);
+  --modal-text: var(--dark-page-text);
+  --modal-header-bg: var(--dark-page-bg);
+  --modal-header-text: var(--dark-page-text);
+  --modal-border: var(--dark-border);
+  --modal-backdrop: rgba(0, 0, 0, 0.5);
+}

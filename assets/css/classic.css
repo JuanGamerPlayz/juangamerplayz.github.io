@@ -1,0 +1,247 @@
+body.classicmode {
+  --lang-width: 150px;
+  --lang-height: 32px;
+  --classic-page-bg: #f1efec;
+  --classic-surface: #fffdf9;
+  --classic-surface-raised: #f8f8f6;
+  --classic-text: #030303;
+  --classic-primary: #030303;
+  --classic-primary-dark: #161616;
+  --classic-border: #9a9a9a;
+  --classic-accent: #2f6f9f;
+  --play-button-fill-dark: #00c711;
+  --play-button-fill-light: #0bc51c;
+  --play-button-outline-dark: #158b20;
+  --play-button-outline-light: #5de765;
+  --play-button-edge: #176b24;
+  --nav-control-bg: var(--classic-primary-dark);
+  --nav-control-hover: var(--classic-primary);
+  --nav-control-border: var(--classic-border);
+  background-color: var(--classic-page-bg);
+  color: var(--classic-text);
+  font-family: "Comic Neue", cursive;
+  cursor: url("../images/icons/classic_roblox_cursor_default.png") 5 5, auto;
+}
+
+body.classicmode.darktheme {
+  --classic-page-bg: #101010;
+  --classic-surface: #181818;
+  --classic-surface-raised: #202020;
+  --classic-text: #f1efec;
+  --classic-primary: #030303;
+  --classic-primary-dark: #181818;
+  --classic-border: #3a3a3a;
+  --classic-accent: #6fa8d1;
+}
+
+body.classicmode {
+  --modal-bg: var(--classic-surface);
+  --modal-text: var(--classic-text);
+  --modal-header-bg: var(--classic-primary);
+  --modal-header-text: #ffffff;
+  --modal-border: var(--classic-border);
+  --modal-backdrop: rgba(0, 0, 0, 0.5);
+}
+
+body.classicmode header,
+body.classicmode .top-bar,
+body.classicmode footer {
+  background-color: var(--classic-primary);
+  color: #ffffff;
+}
+
+body.classicmode nav a,
+body.classicmode footer a {
+  color: #ffffff;
+}
+
+body nav .Separator {
+  display: none;
+}
+
+body.classicmode nav .Separator {
+  display: inline;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+body.classicmode .nav-icon--modern,
+body.classicmode .portfolio-arrow-icon--modern {
+  display: none;
+}
+
+body.classicmode .nav-icon--classic,
+body.classicmode .portfolio-arrow-icon--classic {
+  display: block;
+}
+
+body.classicmode .lang-select-wrap {
+  background: var(--classic-primary-dark);
+  border-color: var(--classic-border);
+}
+
+body.classicmode .lang-select-trigger,
+body.classicmode .lang-select-menu li {
+  background: var(--classic-primary-dark);
+  color: #ffffff;
+}
+
+body.classicmode .lang-select-menu {
+  background: var(--classic-primary-dark);
+  border-color: var(--classic-border);
+}
+
+body.classicmode .lang-select-menu li:hover,
+body.classicmode .lang-select-menu li.selected {
+  background: var(--classic-primary);
+}
+
+body.classicmode .theme-button,
+body.classicmode .color-theme-button {
+  background: var(--classic-primary-dark);
+  border-color: var(--classic-border);
+}
+
+body.classicmode.darktheme .color-theme-icon--sun {
+  display: block;
+}
+
+body.classicmode.darktheme .color-theme-icon--moon {
+  display: none;
+}
+
+body.classicmode a:hover,
+body.classicmode button:hover,
+body.classicmode body:hover {
+  cursor: url("../images/icons/classic_roblox_cursor_hovered.png") 5 5, pointer;
+  text-decoration: underline;
+  color: var(--classic-accent);
+}
+
+body.classicmode a:focus,
+body.classicmode button:focus,
+body.classicmode .lang-select-wrap:focus-within {
+  outline: 2px dotted var(--classic-accent);
+  outline-offset: 2px;
+  text-decoration: underline;
+  cursor: url("../images/icons/classic_roblox_cursor_hovered.png") 5 5, pointer;
+}
+
+body.classicmode .portfolio-box {
+  background: var(--classic-surface);
+  border-color: var(--classic-border);
+}
+
+body.classicmode .portfolio-box,
+body.classicmode .portfolio-item,
+body.classicmode .portfolio-preview {
+  border-color: var(--classic-border);
+}
+
+body.classicmode .portfolio-item,
+body.classicmode .portfolio-preview,
+body.classicmode .portfolio-arrow {
+  background-color: var(--classic-surface-raised);
+}
+
+body.classicmode .portfolio-tab {
+  color: var(--classic-text);
+}
+
+body.classicmode .portfolio-item-info,
+body.classicmode .portfolio-item-info h2,
+body.classicmode .portfolio-item-info p,
+body.classicmode .portfolio-item-info a {
+  color: var(--classic-text);
+}
+
+body.classicmode .portfolio-tab.is-active {
+  border-bottom-color: var(--classic-accent);
+}
+
+body.classicmode .portfolio-arrow {
+  border-color: var(--classic-border);
+  color: var(--classic-text);
+}
+
+body.classicmode .portfolio-arrow:hover:not(:disabled),
+body.classicmode .portfolio-arrow:focus-visible:not(:disabled) {
+  background-color: var(--classic-primary);
+  color: #ffffff;
+}
+
+body.classicmode .universal-play-button {
+  border-color: var(--classic-primary-dark);
+  background-color: var(--classic-primary-dark);
+  color: #ffffff;
+}
+
+.classic-play-button {
+  display: none;
+}
+
+body.classicmode .universal-play-button {
+  display: none;
+}
+
+body.classicmode .classic-play-button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  width: 112px;
+  height: 112px;
+  margin: 18px auto 4px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 9px;
+  border: 7px solid var(--play-button-edge);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--play-button-fill-dark) 0%, var(--play-button-fill-light) 100%);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 900;
+  line-height: 0.95;
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--play-button-edge);
+  text-decoration: none;
+}
+
+body.classicmode .classic-play-button::before,
+body.classicmode .classic-play-button::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+body.classicmode .classic-play-button::before {
+  inset: 0px;
+  padding: 3px;
+  background: linear-gradient(to bottom, var(--play-button-outline-light), var(--play-button-outline-dark));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+body.classicmode .classic-play-button span {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+
+body.classicmode .classic-play-button:hover {
+  background: linear-gradient(to bottom, #0b9818 0%, #19e72b 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+body.classicmode .classic-play-button:active {
+  background: linear-gradient(to bottom, var(--play-button-fill-light) 0%, var(--play-button-fill-dark) 100%);
+  transform: translateY(1px);
+}

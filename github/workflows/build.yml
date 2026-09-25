@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      download_art:
+        description: "Download protected art assets from private source"
+        required: false
+        default: "true"
+        type: boolean
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download protected art assets
+        if: github.event.inputs.download_art == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
+        run: |
+          mkdir -p assets/images/concept-art/crypt-hunter
+          echo "Downloading concept art from GitHub Releases..."
+          gh release download v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "*.zip" \
+            -O /tmp/concept-art.zip
+          unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
+          echo "Concept art assets downloaded successfully."
+          echo "Files:"
+          ls -la assets/images/concept-art/crypt-hunter/
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .

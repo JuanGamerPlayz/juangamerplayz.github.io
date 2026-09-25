@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title data-i18n="page.portfolioTitle">Portfolio - JuanGamerPlayz</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/language.css">
+	<link rel="stylesheet" href="../assets/css/classic.css">
+	<link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+		<main class="portfolio-page">
+			<section class="portfolio-box" aria-label="Portfolio categories" data-i18n="accessibility.portfolioCategories" data-i18n-attr="aria-label">
+				<h1 data-i18n="portfolio.title">Portfolio</h1>
+				<div class="portfolio-tabs" role="tablist" aria-label="Portfolio type" data-i18n="accessibility.portfolioType" data-i18n-attr="aria-label">
+					<button class="portfolio-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="community-management" id="community-tab" data-portfolio-tab="community-management" data-i18n="portfolio.tabs.community">Community Management</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="roblox-projects" id="roblox-tab" data-portfolio-tab="roblox-projects" data-i18n="portfolio.tabs.roblox">Roblox Projects</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="qa" id="qa-tab" data-portfolio-tab="qa" data-i18n="portfolio.tabs.qa">QA</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="ui-ux" id="ui-ux-tab" data-portfolio-tab="ui-ux" data-i18n="portfolio.tabs.uiux">UI/UX</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-art" id="concept-art-tab" data-portfolio-tab="concept-art" data-i18n="portfolio.tabs.conceptArt">Concept Art</button>
+					<button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="3d-art" id="3d-art-tab" data-portfolio-tab="3d-art" data-i18n="portfolio.tabs.art3d">3D Art</button>
+				</div>
+
+				<section id="community-management" class="portfolio-panel" role="tabpanel" aria-labelledby="community-tab" data-portfolio-panel="community-management">
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.community.serverTitle">Rainbow Friends Community Server</h2>
+								<p data-i18n="portfolio.community.serverDescription">Moderation and organization</p>
+							</div>
+						</article>
+                        
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.community.contentTitle">Content &amp; Announcements</h2>
+								<p data-i18n="portfolio.community.contentDescription">Clear communication for communities</p>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-i18n="accessibility.nextProjects" data-i18n-attr="aria-label" data-portfolio-next>&#8594;</button>
+					</div>
+				</section>
+
+				<section id="roblox-projects" class="portfolio-panel" role="tabpanel" aria-labelledby="roblox-tab" data-portfolio-panel="roblox-projects" hidden>
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--crypt-hunter">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.gameJamWinner">Game Jam Winner</span>
+								<h2 data-i18n="portfolio.cryptHunter.title">Crypt Hunter</h2>
+								<div class="portfolio-details" id="crypt-hunter-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.cryptHunter.description">Exploration adventure set in a mysterious temple, where the player tries to recover a legendary gem and escape. Awarded 2nd place in the "Most Innovative Gameplay" category at Inspire 2026.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.cryptHunter.role">2D Concept Artist, Storyboard Artist, and Game Design Collaborator.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="crypt-hunter-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--hammer-smasher">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.featuredProject">Featured Challenge Project</span>
+								<h2 data-i18n="portfolio.hammerSmasher.title">Hammer Smasher</h2>
+								<div class="portfolio-details" id="hammer-smasher-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.hammerSmasher.description">2.5D action-RPG created for the Inspire 2025 challenge where you start at Roblox Headquarters and must stop evil NPCs from destroying everything using the ban hammer, a versatile tool. Battle through the facility and defeat 1x1x1x1, the final boss, at the data center.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.hammerSmasher.role">Art Director & Environment Artist</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="hammer-smasher-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--chop-and-clock">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.featuredProject">Featured Challenge Project</span>
+								<h2 data-i18n="portfolio.chopAndClock.title">Chop & Clock!</h2>
+								<div class="portfolio-details" id="chop-and-clock-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.chopAndClock.description">Chop & Clock is a restaurant management game where players work as a chef in Lviv, Ukraine, created for the Unite 2024. Serve delicious dishes to satisfy hungry customers while completing special challenges and timed tasks.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.chopAndClock.role">Art Director and 3D Artist / Lead Artist.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="chop-and-clock-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--bill-simulation-escape">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.featuredProject">Featured Challenge Project</span>
+								<h2 data-i18n="portfolio.billSimulationEscape.title">BillSimulationEscape</h2>
+								<div class="portfolio-details" id="bill-simulation-escape-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.billSimulationEscape.description">Action-adventure game where players control Bill, a test subject trapped in a collapsing simulation, created for the Inspire 2024 challenge. Navigate through 5 levels filled with time manipulation and gravity reversal challenges, reach the reactor room, and shut it down before the simulation fails completely.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.billSimulationEscape.role">Builder and Environment Designer.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="bill-simulation-escape-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--connection-failure">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.gameJamWinner">Game Jam Winner</span>
+								<h2 data-i18n="portfolio.connectionFailure.title">Connection Failure</h2>
+								<div class="portfolio-details" id="connection-failure-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.connectionFailure.description">A post-apocalyptic survival game where you drive through an abandoned desert, collect batteries to power radio towers, and protect your bus from evil machines trying to destroy you. Awarded 3rd place at Connect 2022.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.connectionFailure.role">3D Modeler and Environment Artist.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="connection-failure-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--kilonova">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.featuredProject">Featured Challenge Project</span>
+								<h2 data-i18n="portfolio.kilonova.title">Kilonova</h2>
+								<div class="portfolio-details" id="kilonova-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.kilonova.description">Massive space station designed entirely with primitive parts for the Roblox Enseña & Aprende challenge. Players navigate the station, disable tower connections, find the communication room, and escape before a Kilonova explosion destroys it.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.kilonova.role">Builder and Environment Designer.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="kilonova-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--origin-of-the-gifts">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.challengeWinner">Challenge Winner</span>
+								<h2 data-i18n="portfolio.originOfTheGifts.title">Origin of the Gifts</h2>
+								<div class="portfolio-details" id="origin-of-the-gifts-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.originOfTheGifts.description">Holiday runway environment where Santa's sleigh can take off and land, designed using Toolbox assets and UGC accessories to create a complete, thematic build. Winner of the Construção category at "Desafio de Natal" 2020.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.originOfTheGifts.role">Environment Artist and Level Designer.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<a class="universal-play-button" href="https://www.roblox.com/games/5372071402" data-i18n="portfolio.actions.playProject">Play Project</a>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="origin-of-the-gifts-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+								<a class="classic-play-button" href="https://www.roblox.com/games/5372071402" aria-label="Play now" data-i18n-attr="aria-label" data-i18n="portfolio.actions.playNow"><span data-i18n="portfolio.actions.play">Play</span><br><span data-i18n="portfolio.actions.now">Now</span></a>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-portfolio-next>&#8594;</button>
+					</div>
+				</section>
+
+				<section id="qa" class="portfolio-panel" role="tabpanel" aria-labelledby="qa-tab" data-portfolio-panel="qa" hidden>
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--rainbow-friends">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2023">QA Tested · 2023</span>
+								<div class="portfolio-details" id="rainbow-friends-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.rainbowFriends.details">Rainbow Friends is a cooperative survival experience where players work together while trying to escape mysterious creatures.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.rainbowFriends.role">QA Tester / Beta Tester</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.rainbowFriends.testing">Survival gameplay, player objectives, and feedback.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.rainbowFriends.title">Rainbow Friends</h2>
+								<p data-i18n="portfolio.rainbowFriends.summary">Cooperative survival experience set in a mascot-themed horror world, where players must work together to escape mysterious creatures.</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="rainbow-friends-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--unnatural-disaster">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2022">QA Tested · 2022</span>
+								<div class="portfolio-details" id="unnatural-disaster-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.unnaturalDisaster.details">Disaster survival game where players face UFOs, zombies, storms, super villains, and more while exploring a magical island. Players can complete challenges, discover hidden puzzles, and survive combined disasters.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.unnaturalDisaster.role">Gameplay QA Tester</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.unnaturalDisaster.testing">Disaster combinations, challenge progression, and bug reporting.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.unnaturalDisaster.title">Unnatural Disaster Survival</h2>
+								<p data-i18n="portfolio.unnaturalDisaster.summary">Disaster survival game with challenges, hidden puzzles, and combined disasters</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="unnatural-disaster-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--super-skyward">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2022">QA Tested · 2022</span>
+								<div class="portfolio-details" id="super-skyward-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.superSkyward.details">Parkour tower game where players use double jumps, wall jumps, pets, and other abilities to overcome obstacles and climb increasingly difficult towers.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.superSkyward.role">Gameplay QA Tester</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.superSkyward.testing">Movement abilities, obstacle collisions, and tower progression.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.superSkyward.title">Super Skyward Towers</h2>
+								<p data-i18n="portfolio.superSkyward.summary">Parkour tower game featuring jumps, pets, abilities, and challenging obstacles</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="super-skyward-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--egg-hunt">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2022">QA Tested · 2022</span>
+								<div class="portfolio-details" id="egg-hunt-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.eggHunt.details">Project created by @DeepAquaticBlue and @InnovativeTime as a what-if continuation of Roblox Egg Hunt events. Players explored, completed missions, and earned UGC-style rewards that stayed in-game.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.eggHunt.role">Volunteer QA Tester with the Valiant Community QA Team.</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.eggHunt.testing">World 1's environment, gameplay mechanics, user interfaces, and bug reporting.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.eggHunt.title">Egg Hunt 2022: Lost In Time</h2>
+								<p data-i18n="portfolio.eggHunt.summary">What-if Egg Hunt adventure with exploration, missions, and in-game UGC-style rewards</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="egg-hunt-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--rotube-life">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2022">QA Tested · 2022</span>
+								<div class="portfolio-details" id="rotube-life-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.roTubeLife.details">Life-simulation experience where players grow from a small creator into a famous RoTuber by recording videos, upgrading their setup, earning awards, and building a headquarters.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.roTubeLife.role">Volunteer QA Tester.</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.roTubeLife.testing">In-game bugs, interactive features, and player-facing functions.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.roTubeLife.title">RoTube Life!</h2>
+								<p data-i18n="portfolio.roTubeLife.summary">Creator simulation about recording videos, upgrading your setup, and becoming a famous RoTuber</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="rotube-life-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--robattle-io">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2022">QA Tested · 2022</span>
+								<div class="portfolio-details" id="robattle-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.roBattle.details">RoBattle.io is a Roblox experience created by the RB Battles Games team for the LazarBeam event, where 100 players battle against one another.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.roBattle.role">Public QA Tester.</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.roBattle.testing">In-game bugs, gameplay systems, and feedback to improve the player experience.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.roBattle.title">RoBattle.io</h2>
+								<p data-i18n="portfolio.roBattle.summary">100-player Roblox battle experience created for the LazarBeam event</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="robattle-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--stranger-things">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.qaTested2021">QA Tested · 2021</span>
+								<div class="portfolio-details" id="stranger-things-qa-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.strangerThings.details">Roblox event experience made through a Wizards of the Coast LLC and Netflix partnership, where players completed quests for event prizes.</p>
+									<p><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.strangerThings.role">Volunteer QA Tester on the Valiant Community QA Team, run by former Roblox employee @Hippie_ofDoom.</span></p>
+									<p><strong data-i18n="portfolio.labels.testingAreas">Testing areas:</strong> <span data-i18n="portfolio.strangerThings.testing">Gameplay mechanics, bug reporting, and testing the experience before its full release on Roblox.</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.strangerThings.title">Stranger Things: Starcourt Mall</h2>
+								<p data-i18n="portfolio.strangerThings.summary">Roblox event experience where players completed quests to earn prizes</p>
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="stranger-things-qa-details" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-portfolio-next>&#8594;</button>
+					</div>
+				</section>
+
+				<section id="ui-ux" class="portfolio-panel" role="tabpanel" aria-labelledby="ui-ux-tab" data-portfolio-panel="ui-ux" hidden>
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.uiux.interfaceTitle">Interface Design</h2>
+								<p data-i18n="portfolio.uiux.interfaceDescription">Simple and readable screens for players</p>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.uiux.playerTitle">Player Experience</h2>
+								<p data-i18n="portfolio.uiux.playerDescription">Layouts and flows that are easy to understand</p>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-i18n="accessibility.nextProjects" data-i18n-attr="aria-label" data-portfolio-next>&#8594;</button>
+					</div>
+				</section>
+
+				<section id="concept-art" class="portfolio-panel" role="tabpanel" aria-labelledby="concept-art-tab" data-portfolio-panel="concept-art" hidden>
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--crypt-hunter-concept-art">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.conceptArt">Concept Art</span>
+								<h2 data-i18n="portfolio.conceptArt.cryptHunter.title">Crypt Hunter Concept Art</h2>
+							</div>
+							<div class="portfolio-item-info">
+								<button class="portfolio-details-button" type="button" aria-expanded="false" data-portfolio-modal="concept-art-modal" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-i18n="accessibility.nextProjects" data-i18n-attr="aria-label" data-portfolio-next>&#8594;</button>
+					</div>
+
+					<div class="portfolio-modal" id="concept-art-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="concept-art-modal-title">
+						<div class="portfolio-modal-backdrop" data-portfolio-modal-close></div>
+						<div class="portfolio-modal-content">
+							<div class="portfolio-modal-header">
+								<h3 id="concept-art-modal-title" data-i18n="portfolio.conceptArt.cryptHunter.title">Crypt Hunter Concept Art</h3>
+								<button class="portfolio-modal-close" type="button" data-portfolio-modal-close data-i18n="portfolio.actions.hideDetails">Back</button>
+							</div>
+							<div class="portfolio-modal-body">
+								<p data-i18n="portfolio.conceptArt.cryptHunter.description">Concept art created for Crypt Hunter, an exploration adventure set in a mysterious temple. Includes character designs, environment studies, and storyboard sequences — both final designs and scrapped early concepts.</p>
+								<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.conceptArt.cryptHunter.role">2D Concept Artist, Character Designer, Environment Concept Artist, and Storyboard Artist.</span></p>
+								<p class="portfolio-conceptart-project-note"><strong data-i18n="portfolio.conceptArt.cryptHunter.projectNote">This artwork was created for Crypt Hunter — find the playable project in the Roblox Projects tab.</strong></p>
+								<div class="portfolio-modal-gallery">
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/gem-guardian-final.webp" alt="Gem Guardian - Final Design (used in game)">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.gemGuardianFinal">Gem Guardian — Final Design (used in game)</figcaption>
+									</figure>
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/gem-guardian-early.webp" alt="Gem Guardian - Early Concept (scrapped)">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.gemGuardianEarly">Gem Guardian — Early Concept (scrapped)</figcaption>
+									</figure>
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/temple-exterior.webp" alt="Temple Exterior - Concept">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.templeExterior">Temple Exterior — Concept</figcaption>
+									</figure>
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/temple-interior.webp" alt="Temple Interior - Lighting Study">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.templeInterior">Temple Interior — Lighting Study</figcaption>
+									</figure>
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/escape-sequence-1.webp" alt="Storyboard - Escape Sequence Page 1">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.storyboardEscape1">Storyboard — Escape Sequence (page 1)</figcaption>
+									</figure>
+									<figure class="portfolio-artwork">
+										<img src="../assets/images/concept-art/crypt-hunter/escape-sequence-2.webp" alt="Storyboard - Escape Sequence Page 2">
+										<figcaption data-i18n="portfolio.conceptArt.cryptHunter.gallery.storyboardEscape2">Storyboard — Escape Sequence (page 2)</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="3d-art" class="portfolio-panel" role="tabpanel" aria-labelledby="3d-art-tab" data-portfolio-panel="3d-art" hidden>
+					<div class="portfolio-carousel" data-portfolio-carousel>
+						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
+						<div class="portfolio-grid">
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.art3d.modelsTitle">Models</h2>
+								<p data-i18n="portfolio.art3d.modelsDescription">Three-dimensional assets for games and scenes</p>
+							</div>
+						</article>
+						<article class="portfolio-item">
+							<div class="portfolio-preview"></div>
+							<div class="portfolio-item-info">
+								<h2 data-i18n="portfolio.art3d.environmentTitle">Environment Assets</h2>
+								<p data-i18n="portfolio.art3d.environmentDescription">Props and spaces built for atmosphere</p>
+							</div>
+						</article>
+						</div>
+						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-i18n="accessibility.nextProjects" data-i18n-attr="aria-label" data-portfolio-next>&#8594;</button>
+					</div>
+				</section>
+
+			</section>
+		</main>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+	<script src="../assets/js/portfolio.js"></script>
+</body>
+</html>
