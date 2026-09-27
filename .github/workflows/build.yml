@@ -24,25 +24,44 @@ jobs:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
           set -e
-          echo "Checking ART_ASSETS_TOKEN..."
+          echo "=== Checking ART_ASSETS_TOKEN ==="
           if [ -z "$GH_TOKEN" ]; then
             echo "ERROR: ART_ASSETS_TOKEN secret is not set"
             exit 1
           fi
           echo "Token is set (length: ${#GH_TOKEN})"
-          echo "Authenticating with gh CLI..."
-          if gh auth status 2>&1; then
-            echo "gh auth status: authenticated"
-          else
-            echo "gh auth status: NOT authenticated"
-          fi
 
           mkdir -p assets/images/concept-art/crypt-hunter
-          echo "Downloading concept art from GitHub Releases..."
-          gh release download v1 \
-            --repo JuanGamerPlayz/concept-art-assets \
-            -p "*.zip" \
-            -O /tmp/concept-art.zip
+          echo "=== Fetching release info for v1 ==="
+          HTTP_CODE=$(curl -s -o /tmp/release.json -w "%{http_code}" \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/JuanGamerPlayz/concept-art-assets/releases/tags/v1)
+          echo "HTTP response code: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "ERROR: Could not fetch release v1 (HTTP $HTTP_CODE)"
+            echo "Response body:"
+            cat /tmp/release.json
+            exit 1
+          fi
+
+          echo "=== Looking for .zip asset ==="
+          ASSET_URL=$(cat /tmp/release.json | grep -o '"browser_download_url": *"[^"]*\.zip"' | head -1 | grep -o '"[^"]*"$' | tr -d '"')
+          if [ -z "$ASSET_URL" ]; then
+            echo "ERROR: No .zip asset found in release v1"
+            echo "Available assets:"
+            cat /tmp/release.json | grep -o '"name": *"[^"]*"' | head -20
+            exit 1
+          fi
+          echo "Found asset: $ASSET_URL"
+
+          echo "=== Downloading ==="
+          curl -sL -H "Authorization: token $GH_TOKEN" -H "Accept: application/octet-stream" "$ASSET_URL" -o /tmp/concept-art.zip
+          echo "Download complete. File size:"
+          ls -la /tmp/concept-art.zip
+
+          echo "=== Extracting ==="
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
           echo "Concept art assets downloaded successfully."
           echo "Files:"
