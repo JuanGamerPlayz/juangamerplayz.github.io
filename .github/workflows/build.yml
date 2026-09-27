@@ -23,6 +23,20 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
+          set -e
+          echo "Checking ART_ASSETS_TOKEN..."
+          if [ -z "$GH_TOKEN" ]; then
+            echo "ERROR: ART_ASSETS_TOKEN secret is not set"
+            exit 1
+          fi
+          echo "Token is set (length: ${#GH_TOKEN})"
+          echo "Authenticating with gh CLI..."
+          if gh auth status 2>&1; then
+            echo "gh auth status: authenticated"
+          else
+            echo "gh auth status: NOT authenticated"
+          fi
+
           mkdir -p assets/images/concept-art/crypt-hunter
           echo "Downloading concept art from GitHub Releases..."
           gh release download v1 \
