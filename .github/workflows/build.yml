@@ -55,6 +55,16 @@ jobs:
             echo "Repo found. Visibility: $(cat /tmp/repo.json | grep -o '"private": *[a-z]*' | head -1)"
           else
             echo "Repo NOT found or not accessible with this token"
+            echo "=== Listing private repos to check token scope ==="
+            curl -s -H "Authorization: token $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/user/repos?visibility=private&per_page=100" | \
+              grep -o '"full_name": *"[^"]*"' | head -20
+            echo "=== Listing ALL repos (public + private) ==="
+            curl -s -H "Authorization: token $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/user/repos?per_page=100" | \
+              grep -o '"full_name": *"[^"]*"' | head -20
             cat /tmp/repo.json
             exit 1
           fi
