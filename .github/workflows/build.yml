@@ -31,6 +31,10 @@ jobs:
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
           ls -la assets/images/concept-art/crypt-hunter/
 
+      - name: Remove concept-art gitignore for deployment
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: sed -i '/assets\/images\/concept-art\//d' .gitignore
+
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
