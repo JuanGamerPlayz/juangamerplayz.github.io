@@ -292,21 +292,103 @@
 						<button class="portfolio-arrow portfolio-arrow--previous" type="button" aria-label="Previous projects" data-i18n="accessibility.previousProjects" data-i18n-attr="aria-label" data-portfolio-previous>&#8592;</button>
 						<div class="portfolio-grid">
 						<article class="portfolio-item">
+							<div class="portfolio-preview portfolio-preview--listou">
+								<span class="portfolio-preview-label" data-i18n="portfolio.labels.teamProject">Team Project</span>
+								<h2 data-i18n="portfolio.listou.title">Listōu</h2>
+								<div class="portfolio-details" id="listou-details" data-portfolio-details aria-hidden="true">
+									<p data-i18n="portfolio.listou.description">A task and list management app designed from scratch using computational thinking principles, featuring statistics, meetings, chat, group management, and AI-powered accessibility.</p>
+									<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.listou.role">UI/UX Designer & Visual Design Lead</span></p>
+								</div>
+							</div>
+							<div class="portfolio-item-info">
+								<button class="portfolio-details-button" type="button" aria-expanded="false" aria-controls="listou-details" data-portfolio-modal="listou-modal" data-i18n="portfolio.actions.viewDetails">View Details</button>
+							</div>
+						</article>
+						<article class="portfolio-item">
 							<div class="portfolio-preview"></div>
 							<div class="portfolio-item-info">
 								<h2 data-i18n="portfolio.uiux.interfaceTitle">Interface Design</h2>
 								<p data-i18n="portfolio.uiux.interfaceDescription">Simple and readable screens for players</p>
 							</div>
 						</article>
-						<article class="portfolio-item">
-							<div class="portfolio-preview"></div>
-							<div class="portfolio-item-info">
-								<h2 data-i18n="portfolio.uiux.playerTitle">Player Experience</h2>
-								<p data-i18n="portfolio.uiux.playerDescription">Layouts and flows that are easy to understand</p>
-							</div>
-						</article>
 						</div>
 						<button class="portfolio-arrow portfolio-arrow--next" type="button" aria-label="Next projects" data-i18n="accessibility.nextProjects" data-i18n-attr="aria-label" data-portfolio-next>&#8594;</button>
+					</div>
+
+					<div class="portfolio-modal" id="listou-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="listou-modal-title">
+						<div class="portfolio-modal-backdrop" data-portfolio-modal-close></div>
+						<div class="portfolio-modal-content">
+							<div class="portfolio-modal-header">
+								<h3 id="listou-modal-title" data-i18n="portfolio.listou.title">Listōu</h3>
+								<button class="portfolio-modal-close" type="button" data-portfolio-modal-close data-i18n="portfolio.actions.hideDetails">Back</button>
+							</div>
+							<div class="portfolio-modal-body">
+								<p data-i18n="portfolio.listou.fullDescription">Listōu is a collaborative task and list management app designed from scratch in approximately a week. Built on computational thinking pillars, the app helps teams and individuals stay organized through a clean and intuitive interface.</p>
+								<p class="portfolio-item-role"><strong data-i18n="portfolio.labels.myRole">My role:</strong> <span data-i18n="portfolio.listou.role">UI/UX Designer & Visual Design Lead</span></p>
+								<p class="portfolio-conceptart-project-note"><strong data-i18n="portfolio.listou.projectNote">Complete name, color palette, page structures, and functionalities were designed by me using computational thinking principles.</strong></p>
+								<div class="portfolio-modal-gallery">
+									<h4 data-i18n="portfolio.listou.screenshotsTitle">App Screenshots</h4>
+									<div class="portfolio-screenshots-grid">
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_01.png" alt="Listōu Landing Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.landing">Landing / Splash Screen</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_02.png" alt="Listōu Main Dashboard">
+											<figcaption data-i18n="portfolio.listou.screenshots.dashboard">Main Dashboard - Task List</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_03.png" alt="Listōu Statistics Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.statistics">Statistics - Progress Tracking</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_04.png" alt="Listōu Chat Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.chat">Chat - Real-time Messaging</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_05.png" alt="Listōu Meetings Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.meetings">Calls / Meetings</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_06.png" alt="Listōu Groups Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.groups">Groups - Team Management</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_07.png" alt="Listōu Contact Screen">
+											<figcaption data-i18n="portfolio.listou.screenshots.contact">Contact - Team Directory</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_08.png" alt="Listōu Notifications">
+											<figcaption data-i18n="portfolio.listou.screenshots.notifications">Smart Notifications</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_09.png" alt="Listōu Client Support">
+											<figcaption data-i18n="portfolio.listou.screenshots.support">Client Support - Assistance</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_10.png" alt="Listōu AI Accessibility">
+											<figcaption data-i18n="portfolio.listou.screenshots.ai">AI for Accessibility</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_11.png" alt="Listōu Task Creation">
+											<figcaption data-i18n="portfolio.listou.screenshots.createTask">Create / Edit Task</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_12.png" alt="Listōu Group Chat">
+											<figcaption data-i18n="portfolio.listou.screenshots.groupChat">Group Chat Conversation</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_13.png" alt="Listōu Meeting Room">
+											<figcaption data-i18n="portfolio.listou.screenshots.meetingRoom">Virtual Meeting Room</figcaption>
+										</figure>
+										<figure class="portfolio-screenshot">
+											<img src="../assets/images/ui-ux/listou/listou_14.png" alt="Listōu Settings">
+											<figcaption data-i18n="portfolio.listou.screenshots.settings">Settings & Preferences</figcaption>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 

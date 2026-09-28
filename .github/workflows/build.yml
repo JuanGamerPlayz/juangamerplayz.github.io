@@ -31,9 +31,23 @@ jobs:
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
           ls -la assets/images/concept-art/crypt-hunter/
 
-      - name: Remove concept-art gitignore for deployment
+      - name: Download protected UI/UX assets
+        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
+        run: |
+          mkdir -p assets/images/ui-ux/listou
+          cd assets/images/ui-ux/listou
+          gh release download listou-v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "listou_*.png"
+          ls -la
+
+      - name: Remove protected assets gitignore entries for deployment
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: sed -i '/assets\/images\/concept-art\//d' .gitignore
+        run: |
+          sed -i '/assets\/images\/concept-art\//d' .gitignore
+          sed -i '/assets\/images\/ui-ux\//d' .gitignore
 
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
