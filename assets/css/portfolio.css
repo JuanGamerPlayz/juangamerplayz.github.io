@@ -317,7 +317,7 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 }
 
 .portfolio-preview--listou {
-  background: linear-gradient(135deg, #0EA5E9 0%, #8B5CF6 50%, #EC4899 100%);
+  background-image: url("../images/ui-ux/listou/LT_Presentation.png");
   background-size: cover;
   background-position: center;
 }
