@@ -40,7 +40,7 @@ jobs:
           cd assets/images/ui-ux/listou
           gh release download listou-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
-            -p "listou_*.png"
+            -p "LT_*.png"
           ls -la
 
       - name: Remove protected assets gitignore entries for deployment
