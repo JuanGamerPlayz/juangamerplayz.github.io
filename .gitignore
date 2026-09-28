@@ -5,3 +5,7 @@ assets/images/concept-art/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Sensitive / build files
+secret.json
+node_modules/
