@@ -23,88 +23,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
-          set -e
-          echo "=== Checking ART_ASSETS_TOKEN ==="
-          if [ -z "$GH_TOKEN" ]; then
-            echo "ERROR: ART_ASSETS_TOKEN secret is not set"
-            exit 1
-          fi
-          echo "Token is set (length: ${#GH_TOKEN})"
-
-          echo "=== Checking token validity (GET /user) ==="
-          USER_CODE=$(curl -s -o /tmp/user.json -w "%{http_code}" \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/user)
-          echo "GET /user -> HTTP $USER_CODE"
-          if [ "$USER_CODE" == "200" ]; then
-            echo "Token belongs to: $(cat /tmp/user.json | grep -o '"login": *"[^"]*"' | head -1)"
-          else
-            echo "Token is invalid or expired!"
-            cat /tmp/user.json
-            exit 1
-          fi
-
-          echo "=== Checking repo access ==="
-          REPO_CODE=$(curl -s -o /tmp/repo.json -w "%{http_code}" \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/JuanGamerPlayz/concept-art-assets)
-          echo "GET /repos/JuanGamerPlayz/concept-art-assets -> HTTP $REPO_CODE"
-          if [ "$REPO_CODE" == "200" ]; then
-            echo "Repo found. Visibility: $(cat /tmp/repo.json | grep -o '"private": *[a-z]*' | head -1)"
-          else
-            echo "Repo NOT found or not accessible with this token"
-            echo "=== Listing private repos to check token scope ==="
-            curl -s -H "Authorization: token $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/user/repos?visibility=private&per_page=100" | \
-              grep -o '"full_name": *"[^"]*"' | head -20
-            echo "=== Listing ALL repos (public + private) ==="
-            curl -s -H "Authorization: token $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/user/repos?per_page=100" | \
-              grep -o '"full_name": *"[^"]*"' | head -20
-            cat /tmp/repo.json
-            exit 1
-          fi
-
           mkdir -p assets/images/concept-art/crypt-hunter
-          echo "=== Checking release v1 ==="
-          HTTP_CODE=$(curl -s -o /tmp/release.json -w "%{http_code}" \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/JuanGamerPlayz/concept-art-assets/releases/tags/v1)
-          echo "GET /releases/tags/v1 -> HTTP $HTTP_CODE"
-          if [ "$HTTP_CODE" == "200" ]; then
-            echo "Release v1 found!"
-            echo "Assets in release:"
-            cat /tmp/release.json | grep -o '"name": *"[^"]*"' | head -20
-          else
-            echo "Release v1 NOT found (HTTP $HTTP_CODE)"
-            cat /tmp/release.json
-            exit 1
-          fi
-
-          echo "=== Looking for .zip asset ==="
-          ASSET_URL=$(cat /tmp/release.json | grep -o '"browser_download_url": *"[^"]*\.zip"' | head -1 | grep -o '"[^"]*"$' | tr -d '"')
-          if [ -z "$ASSET_URL" ]; then
-            echo "ERROR: No .zip asset found in release v1"
-            echo "Available assets:"
-            cat /tmp/release.json | grep -o '"name": *"[^"]*"' | head -20
-            exit 1
-          fi
-          echo "Found asset: $ASSET_URL"
-
-          echo "=== Downloading ==="
-          curl -sL -H "Authorization: token $GH_TOKEN" -H "Accept: application/octet-stream" "$ASSET_URL" -o /tmp/concept-art.zip
-          echo "Download complete. File size:"
-          ls -la /tmp/concept-art.zip
-
-          echo "=== Extracting ==="
+          gh release download v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "*.zip" \
+            -O /tmp/concept-art.zip
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
-          echo "Concept art assets downloaded successfully."
-          echo "Files:"
           ls -la assets/images/concept-art/crypt-hunter/
 
       - name: Deploy to GitHub Pages
