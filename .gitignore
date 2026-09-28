@@ -1,0 +1,7 @@
+# Protected art assets - downloaded during CI build
+# These images are NOT in the public repo
+assets/images/concept-art/
+
+# OS files
+.DS_Store
+Thumbs.db
