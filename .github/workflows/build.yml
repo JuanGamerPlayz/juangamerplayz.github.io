@@ -67,14 +67,14 @@ jobs:
             -p "CC_*.png"
           ls -la
 
-      - name: Remove protected assets gitignore entries for deployment
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          sed -i '/assets\/images\/concept-art\//d' .gitignore
-          sed -i '/assets\/images\/ui-ux\//d' .gitignore
+    - name: Remove protected assets gitignore entries for deployment
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+      run: |
+        sed -i '/assets\/images\/concept-art\//d' .gitignore
+        sed -i '/assets\/images\/ui-ux\//d' .gitignore
 
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    - name: Deploy to GitHub Pages
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
