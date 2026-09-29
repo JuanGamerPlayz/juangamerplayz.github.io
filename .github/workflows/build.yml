@@ -31,7 +31,7 @@ jobs:
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
           ls -la assets/images/concept-art/crypt-hunter/
 
-      - name: Download protected UI/UX assets
+      - name: Download protected UI/UX assets - Listōu
         if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
@@ -41,6 +41,30 @@ jobs:
           gh release download listou-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
             -p "LT_*.png"
+          ls -la
+
+      - name: Download protected UI/UX assets - The Last Oucome
+        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
+        run: |
+          mkdir -p assets/images/ui-ux/the-last-outcome
+          cd assets/images/ui-ux/the-last-outcome
+          gh release download tlo-v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "TLO_*.png"
+          ls -la
+
+      - name: Download protected UI/UX assets - Chop & Clock!
+        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
+        run: |
+          mkdir -p "assets/images/ui-ux/chop-and-clock"
+          cd "assets/images/ui-ux/chop-and-clock"
+          gh release download chopclock-v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "CC_*.png"
           ls -la
 
       - name: Remove protected assets gitignore entries for deployment
