@@ -161,6 +161,22 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   flex: 0 0 calc((100% - 20px) / 2);
 }
 
+#community-management .portfolio-grid {
+  display: flex;
+}
+
+#community-management .portfolio-item {
+  flex: 0 0 calc((100% - 20px) / 2);
+}
+
+[id="3d-art"] .portfolio-grid {
+  display: flex;
+}
+
+[id="3d-art"] .portfolio-item {
+  flex: 0 0 calc((100% - 20px) / 2);
+}
+
 .portfolio-arrow {
   position: absolute;
   top: 50%;
@@ -699,6 +715,11 @@ body.classicmode .portfolio-discord-link {
     margin-bottom: 24px;
   }
 
+  .portfolio-dropdown-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
   .portfolio-grid {
     display: flex;
     scroll-snap-type: x mandatory;
@@ -717,16 +738,28 @@ body.classicmode .portfolio-discord-link {
     flex-basis: 100%;
   }
 
+  #community-management .portfolio-item {
+    flex-basis: 100%;
+  }
+
+  #roblox-projects .portfolio-item {
+    flex-basis: 100%;
+  }
+
+  #ui-ux .portfolio-item {
+    flex-basis: 100%;
+  }
+
+  [id="3d-art"] .portfolio-item {
+    flex-basis: 100%;
+  }
+
   .portfolio-preview {
     min-height: 220px;
   }
 
-  .portfolio-arrow--previous {
-    left: -18px;
-  }
-
-  .portfolio-arrow--next {
-    right: -18px;
+  .portfolio-arrow {
+    display: none;
   }
 
   .portfolio-modal {

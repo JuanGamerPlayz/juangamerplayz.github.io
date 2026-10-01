@@ -86,3 +86,30 @@
 .lang-select-menu li.selected {
   background: var(--nav-control-hover);
 }
+
+@media (max-width: 760px) {
+  :root {
+    --lang-width: 128px;
+  }
+
+  .lang-select-trigger {
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --lang-width: 112px;
+  }
+
+  .lang-select-trigger {
+    padding: 0 6px;
+    font-size: 0.8rem;
+  }
+
+  .lang-select-caret {
+    display: none;
+  }
+}
