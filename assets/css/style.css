@@ -610,10 +610,11 @@ body.darktheme:not(.classicmode) .contact-about {
 }
 
 .contact-social__grid {
-    display: flex;
-    justify-content: flex-start;
-    gap: 16px;
-    margin: 24px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200.8px);
+    justify-content: start;
+    gap: 24px;
+    margin: 32px 0 0;
     padding: 0;
     list-style: none;
 }
@@ -624,45 +625,50 @@ body.darktheme:not(.classicmode) .contact-about {
 
 .contact-social__link {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
-    padding: 16px 20px;
-    border: 3px solid currentColor;
-    background: var(--light-page-bg);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
     color: inherit;
 }
 
-body.darktheme:not(.classicmode) .contact-social__link {
+.contact-social__icon {
+    display: grid;
+    width: 200.8px;
+    height: 200.8px;
+    border: 3px solid currentColor;
+    background: var(--light-page-bg);
+    color: currentColor;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+body.darktheme:not(.classicmode) .contact-social__icon {
     background: var(--dark-surface);
 }
 
-.contact-social__link:hover,
-.contact-social__link:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-body.darktheme:not(.classicmode) .contact-social__link:hover,
-body.darktheme:not(.classicmode) .contact-social__link:focus-visible {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.contact-social__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    color: currentColor;
-    flex-shrink: 0;
+.contact-social__icon svg,
+.contact-social__icon img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
 .contact-social__name {
+    display: block;
     font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.35;
+}
+
+.contact-social__handle {
+    display: block;
+    margin-top: -6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--home-muted);
 }
 
 .contact-about__character {
