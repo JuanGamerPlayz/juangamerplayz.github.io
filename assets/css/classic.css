@@ -1,37 +1,55 @@
 body.classicmode {
   --lang-width: 150px;
   --lang-height: 32px;
-  --classic-page-bg: #f1efec;
-  --classic-surface: #fffdf9;
-  --classic-surface-raised: #f8f8f6;
-  --classic-text: #030303;
-  --classic-primary: #030303;
-  --classic-primary-dark: #161616;
-  --classic-border: #9a9a9a;
-  --classic-accent: #2f6f9f;
-  --play-button-fill-dark: #00c711;
-  --play-button-fill-light: #0bc51c;
-  --play-button-outline-dark: #158b20;
-  --play-button-outline-light: #5de765;
-  --play-button-edge: #176b24;
-  --nav-control-bg: var(--classic-primary-dark);
-  --nav-control-hover: var(--classic-primary);
-  --nav-control-border: var(--classic-border);
+  --classic-page-bg: #4882cb;
+  --classic-sky: radial-gradient(ellipse 38% 90px at 22% 70px, rgb(255 255 255 / 0.55), transparent 70%),
+    radial-gradient(ellipse 30% 70px at 78% 150px, rgb(255 255 255 / 0.45), transparent 70%),
+    radial-gradient(ellipse 45% 110px at 55% 330px, rgb(255 255 255 / 0.35), transparent 70%),
+    linear-gradient(to bottom, #4882cb 0, #4883c7 200px, #598ed0 300px, #85b1e2 400px, #b3d4f5 500px, #d5eaff 600px, #eef7fe 700px, #f8fcff 760px);
+  --classic-surface: #ffffff;
+  --classic-surface-raised: #eeeeee;
+  --classic-text: #000000;
+  --classic-muted: #555555;
+  --classic-faint: #999999;
+  --classic-primary: #6e99c9;
+  --classic-primary-dark: #4f7ba9;
+  --classic-border: #000000;
+  --classic-accent: #0000ff;
+  --classic-btn-bg: #ffffff;
+  --classic-btn-text: #777777;
+  --classic-btn-border: #777777;
+  --classic-btn-hover-bg: #6e99c9;
+  --classic-btn-hover-text: #ffffff;
+  --nav-control-bg: #ffffff;
+  --nav-control-hover: #dde9f7;
+  --nav-control-border: #777777;
   background-color: var(--classic-page-bg);
+  background-image: var(--classic-sky);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--classic-text);
-  font-family: "Comic Neue", cursive;
+  font-family: "Comic Sans MS", "Comic Neue", Verdana, sans-serif;
   cursor: url("../images/icons/classic_roblox_cursor_default.png") 5 5, auto;
 }
 
 body.classicmode.darktheme {
-  --classic-page-bg: #101010;
-  --classic-surface: #181818;
-  --classic-surface-raised: #202020;
-  --classic-text: #f1efec;
-  --classic-primary: #030303;
-  --classic-primary-dark: #181818;
-  --classic-border: #3a3a3a;
-  --classic-accent: #6fa8d1;
+  --classic-page-bg: #05060f;
+  --classic-sky: radial-gradient(ellipse 38% 90px at 22% 70px, rgb(255 255 255 / 0.16), transparent 70%),
+    radial-gradient(ellipse 30% 70px at 78% 150px, rgb(255 255 255 / 0.12), transparent 70%),
+    radial-gradient(ellipse 45% 110px at 55% 330px, rgb(255 255 255 / 0.09), transparent 70%),
+    linear-gradient(to bottom, #05060f 0, #0a0d20 200px, #131a3a 400px, #2c3c73 600px, #6d84b8 700px, #a8bcd8 760px);
+  --classic-surface: #ffffff;
+  --classic-surface-raised: #eeeeee;
+  --classic-text: #000000;
+  --classic-muted: #555555;
+  --classic-faint: #999999;
+  --classic-primary: #6e99c9;
+  --classic-primary-dark: #4f7ba9;
+  --classic-border: #000000;
+  --classic-accent: #0000ff;
+  --nav-control-bg: #ffffff;
+  --nav-control-hover: #dde9f7;
+  --nav-control-border: #777777;
 }
 
 body.classicmode {
@@ -47,6 +65,7 @@ body.classicmode header,
 body.classicmode .top-bar,
 body.classicmode footer {
   background-color: var(--classic-primary);
+  border-color: var(--classic-border);
   color: #ffffff;
 }
 
@@ -76,30 +95,38 @@ body.classicmode .portfolio-arrow-icon--classic {
 }
 
 body.classicmode .lang-select-wrap {
-  background: var(--classic-primary-dark);
-  border-color: var(--classic-border);
+  background: var(--classic-btn-bg);
+  border-color: var(--classic-btn-border);
 }
 
 body.classicmode .lang-select-trigger,
 body.classicmode .lang-select-menu li {
-  background: var(--classic-primary-dark);
-  color: #ffffff;
+  background: var(--classic-btn-bg);
+  color: var(--classic-btn-text);
 }
 
 body.classicmode .lang-select-menu {
-  background: var(--classic-primary-dark);
-  border-color: var(--classic-border);
+  background: var(--classic-btn-bg);
+  border-color: var(--classic-btn-border);
 }
 
 body.classicmode .lang-select-menu li:hover,
 body.classicmode .lang-select-menu li.selected {
-  background: var(--classic-primary);
+  background: var(--classic-btn-hover-bg);
+  color: var(--classic-btn-hover-text);
 }
 
 body.classicmode .theme-button,
 body.classicmode .color-theme-button {
-  background: var(--classic-primary-dark);
-  border-color: var(--classic-border);
+  background: var(--classic-btn-bg);
+  border-color: var(--classic-btn-border);
+  color: var(--classic-btn-text);
+}
+
+body.classicmode .theme-button:hover,
+body.classicmode .color-theme-button:hover {
+  background: var(--classic-btn-hover-bg);
+  color: var(--classic-btn-hover-text);
 }
 
 body.classicmode.darktheme .color-theme-icon--sun {
@@ -116,6 +143,12 @@ body.classicmode body:hover {
   cursor: url("../images/icons/classic_roblox_cursor_hovered.png") 5 5, pointer;
   text-decoration: underline;
   color: var(--classic-accent);
+}
+
+body.classicmode header a:hover,
+body.classicmode footer a:hover,
+body.classicmode nav a:hover {
+  color: #ffffff;
 }
 
 body.classicmode a:focus,
@@ -145,7 +178,9 @@ body.classicmode .portfolio-arrow {
 }
 
 body.classicmode .portfolio-tab {
-  color: var(--classic-text);
+  background: var(--classic-btn-bg);
+  color: var(--classic-btn-text);
+  border-color: var(--classic-btn-border);
 }
 
 body.classicmode .portfolio-item-info,
@@ -165,14 +200,16 @@ body.classicmode .portfolio-dropdown-menu {
 }
 
 body.classicmode .portfolio-dropdown-menu .portfolio-tab {
-  color: var(--classic-text);
-  border-bottom-color: var(--classic-border);
+  background: var(--classic-btn-bg);
+  color: var(--classic-btn-text);
+  border-bottom-color: var(--classic-btn-border);
 }
 
 body.classicmode .portfolio-dropdown-menu .portfolio-tab:hover,
 body.classicmode .portfolio-dropdown-menu .portfolio-tab:focus-visible {
-  background: var(--classic-primary);
-  color: #ffffff;
+  background: var(--classic-btn-hover-bg);
+  border-color: #000000;
+  color: var(--classic-btn-hover-text);
 }
 
 body.classicmode .portfolio-arrow {
@@ -182,82 +219,80 @@ body.classicmode .portfolio-arrow {
 
 body.classicmode .portfolio-arrow:hover:not(:disabled),
 body.classicmode .portfolio-arrow:focus-visible:not(:disabled) {
-  background-color: var(--classic-primary);
-  color: #ffffff;
+  background-color: var(--classic-btn-hover-bg);
+  border-color: #000000;
+  color: var(--classic-btn-hover-text);
 }
 
 body.classicmode .universal-play-button {
-  border-color: var(--classic-primary-dark);
-  background-color: var(--classic-primary-dark);
-  color: #ffffff;
+  display: none;
 }
 
 .classic-play-button {
   display: none;
 }
 
-body.classicmode .universal-play-button {
-  display: none;
-}
-
 body.classicmode .classic-play-button {
-  position: relative;
-  overflow: hidden;
-  display: flex;
+  display: block;
   box-sizing: border-box;
-  width: 112px;
-  height: 112px;
+  width: 250px;
+  min-height: 53px;
   margin: 18px auto 4px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 9px;
-  border: 7px solid var(--play-button-edge);
-  border-radius: 50%;
-  background: linear-gradient(to bottom, var(--play-button-fill-dark) 0%, var(--play-button-fill-light) 100%);
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  font-size: 1.55rem;
-  font-weight: 900;
-  line-height: 0.95;
+  padding: 12px;
+  border: 2px solid #7f3900;
+  border-radius: 10px;
+  background-color: #55d02a;
+  color: #2b1a00;
+  font-family: "Comic Sans MS", "Comic Neue", cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
   text-align: center;
-  text-shadow: 2px 2px 0 var(--play-button-edge);
   text-decoration: none;
 }
 
-body.classicmode .classic-play-button::before,
-body.classicmode .classic-play-button::after {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  pointer-events: none;
+body.classicmode .classic-play-button:hover,
+body.classicmode .classic-play-button:focus-visible {
+  animation: classic-play-fader 1.2s linear infinite alternate;
 }
 
-body.classicmode .classic-play-button::before {
-  inset: 0px;
-  padding: 3px;
-  background: linear-gradient(to bottom, var(--play-button-outline-light), var(--play-button-outline-dark));
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
+@keyframes classic-play-fader {
+  from {
+    background-color: #55d02a;
+  }
+
+  to {
+    background-color: #f4cc2e;
+  }
 }
 
-body.classicmode .classic-play-button span {
-  position: relative;
-  display: block;
-  max-width: 100%;
-  z-index: 1;
-  overflow-wrap: anywhere;
+@media (prefers-reduced-motion: reduce) {
+  body.classicmode .classic-play-button:hover,
+  body.classicmode .classic-play-button:focus-visible {
+    animation: none;
+    background-color: #f4cc2e;
+  }
 }
 
-body.classicmode .classic-play-button:hover {
-  background: linear-gradient(to bottom, #0b9818 0%, #19e72b 100%);
-  color: #ffffff;
-  transform: translateY(-2px);
+body.classicmode .portfolio-details-button {
+  border: 1px solid #555;
+  background: #eee;
+  color: #555;
 }
 
-body.classicmode .classic-play-button:active {
-  background: linear-gradient(to bottom, var(--play-button-fill-light) 0%, var(--play-button-fill-dark) 100%);
-  transform: translateY(1px);
+body.classicmode .portfolio-details-button:hover,
+body.classicmode .portfolio-details-button:focus-visible {
+  border: 1px solid #333;
+  background: #ddd;
+  color: #333;
+}
+
+body.classicmode .portfolio-preview-label {
+  background: #ccc;
+  color: #333;
+}
+
+body.classicmode .portfolio-preview h2,
+body.classicmode .portfolio-item-info h2 {
+  color: #333;
 }
