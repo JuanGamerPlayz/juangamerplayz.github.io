@@ -3,7 +3,7 @@ const footer = document.createElement("footer");
 footer.innerHTML = `
   <p>&copy; 2026 JuanGamerPlayz</p>
   <p>
-    <a href="/pages/contact.html" data-i18n="footer.contact">Contact me</a>
+    <a href="/contact/" data-i18n="footer.contact">Contact me</a>
   </p>
 `;
 

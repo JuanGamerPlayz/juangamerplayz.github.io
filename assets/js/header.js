@@ -3,12 +3,12 @@ const header = document.createElement("header");
 header.innerHTML = `
   <div class="top-bar">
     <nav aria-label="Main navigation" data-i18n="accessibility.mainNavigation" data-i18n-attr="aria-label">
-      <a href="/index.html" data-i18n="nav.home"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEuNzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtaG91c2UgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTUgMjF2LThhMSAxIDAgMCAwLTEtMWgtNGExIDEgMCAwIDAtMSAxdjgiLz48cGF0aCBkPSJNMyAxMGEyIDIgMCAwIDEgLjcwOS0xLjUyOGw3LTZhMiAyIDAgMCAxIDIuNTgyIDBsNyA2QTIgMiAwIDAgMSAyMSAxMHY5YTIgMiAwIDAgMS0yIDJINWEyIDIgMCAwIDEtMi0yeiIvPjwvc3ZnPg==" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/house.png" alt="">Home</a>
+      <a href="/home/" data-i18n="nav.home"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEuNzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtaG91c2UgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTUgMjF2LThhMSAxIDAgMCAwLTEtMWgtNGExIDEgMCAwIDAtMSAxdjgiLz48cGF0aCBkPSJNMyAxMGEyIDIgMCAwIDEgLjcwOS0xLjUyOGw3LTZhMiAyIDAgMCAxIDIuNTgyIDBsNyA2QTIgMiAwIDAgMSAyMSAxMHY5YTIgMiAwIDAgMS0yIDJINWEyIDIgMCAwIDEtMi0yeiIvPjwvc3ZnPg==" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/house.png" alt="">Home</a>
       <span class="Separator" aria-hidden="true">|</span>
-      <a href="/pages/portfolio.html" data-i18n="nav.portfolio"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJyaWVmY2FzZS1idXNpbmVzcyBwcmV2aWV3LWljb24iPjxwYXRoIGQ9Ik0xMiAxMmguMDEiLz48cGF0aCBkPSJNMTYgNlY0YTIgMiAwIDAgMC0yLTJoLTRhMiAyIDAgMCAwLTIgMnYyIi8+PHBhdGggZD0iTTIyIDEzYTE4LjE1IDE4LjE1IDAgMCAxLTIwIDAiLz48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHg9IjIiIHk9IjYiIHJ4PSIyIi8+PC9zdmc+" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/briefcase.png" alt="">Portfolio</a>
+      <a href="/portfolio/" data-i18n="nav.portfolio"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJyaWVmY2FzZS1idXNpbmVzcyBwcmV2aWV3LWljb24iPjxwYXRoIGQ9Ik0xMiAxMmguMDEiLz48cGF0aCBkPSJNMTYgNlY0YTIgMiAwIDAgMC0yLTJoLTRhMiAyIDAgMCAwLTIgMnYyIi8+PHBhdGggZD0iTTIyIDEzYTE4LjE1IDE4LjE1IDAgMCAxLTIwIDAiLz48cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHg9IjIiIHk9IjYiIHJ4PSIyIi8+PC9zdmc+" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/briefcase.png" alt="">Portfolio</a>
       <span class="Separator" aria-hidden="true">|</span>
-      <a href="/pages/contact.html" data-i18n="nav.contact"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNtYXJ0cGhvbmUgcHJldmlldy1pY29uIj48cmVjdCB3aWR0aD0iMTQiIGhlaWdodD0iMjAiIHg9IjUiIHk9IjIiIHJ4PSIyIiByeT0iMiIvPjxwYXRoIGQ9Ik0xMiAxOGguMDEiLz48L3N2Zz4=" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/phone.png" alt="">Contact</a>
-      <!-- <a href="/pages/cv-resume.html" data-i18n="nav.resume">CV / Resume</a> -->
+      <a href="/contact/" data-i18n="nav.contact"><img class="nav-icon nav-icon--modern" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNtYXJ0cGhvbmUgcHJldmlldy1pY29uIj48cmVjdCB3aWR0aD0iMTQiIGhlaWdodD0iMjAiIHg9IjUiIHk9IjIiIHJ4PSIyIiByeT0iMiIvPjxwYXRoIGQ9Ik0xMiAxOGguMDEiLz48L3N2Zz4=" alt=""><img class="nav-icon nav-icon--classic" aria-hidden="true" src="https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/phone.png" alt="">Contact</a>
+      <!-- <a href="/cv-resume/" data-i18n="nav.resume">CV / Resume</a> -->
     </nav>
 
     <div class="header-actions">
@@ -80,12 +80,10 @@ document.addEventListener("click", (event) => {
 let translations = {};
 const defaultLang = localStorage.getItem("lang") || "en";
 const isPortfolioPage = window.location.pathname.includes("portfolio");
-const iconBase = window.location.pathname.includes("/pages/")
-  ? "../assets/images/icons/"
-  : "assets/images/icons/";
-const flagBase = window.location.pathname.includes("/pages/")
-  ? "../assets/images/flags/"
-  : "assets/images/flags/";
+const isNestedPage = window.location.pathname.replace(/\/+$/, "").split("/").length > 1;
+const relativeBase = isNestedPage ? "../" : "";
+const iconBase = `${relativeBase}assets/images/icons/`;
+const flagBase = `${relativeBase}assets/images/flags/`;
 const disabledIcon = `${iconBase}classic_r_logo_disabled.png`;
 const activatedIcon = `${iconBase}classic_r_logo_activated.png`;
 
@@ -165,11 +163,7 @@ function applyColorThemeButtonState() {
 }
 
 async function loadTranslations(lang) {
-  const localeBase = window.location.pathname.includes("/pages/")
-    ? "../locales/"
-    : "locales/";
-
-  const response = await fetch(`${localeBase}${lang}.json`, { cache: "no-store" });
+  const response = await fetch(`${relativeBase}locales/${lang}.json`, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Locale not found: ${lang}`);
   }
