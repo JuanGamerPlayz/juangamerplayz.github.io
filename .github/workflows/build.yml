@@ -73,14 +73,30 @@ jobs:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
           mkdir -p "assets/images/3d-art/the-last-outcome"
-          cd "assets/images/3d-art/the-last-outcome"
           gh release download tlo-models-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
-            -p "TLO_MODEL_*.png"
+            -p "*.zip" \
+            -O /tmp/3d-art.zip
+          mkdir -p /tmp/3d-art-extracted
+          unzip -o /tmp/3d-art.zip -d /tmp/3d-art-extracted
+
+          # Rename files with TLO_Model_ prefix pattern
+          find /tmp/3d-art-extracted -name "*.png" | while read f; do
+            base=$(basename "$f" .png)
+            case "$base" in
+              eggman-final-render) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_Eggman_Final_Render.png" ;;
+              sonic-final-render) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_Sonic_Final_Render.png" ;;
+              tails-final-render) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_Tails_Final_Render.png" ;;
+              tails-final-render-alt) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_Tails_Final_Render_Alt.png" ;;
+              2011x-final-render) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_2011x_Final_Render.png" ;;
+              2011x-final-render-alt) cp "$f" "assets/images/3d-art/the-last-outcome/TLO_Model_2011x_Final_Render_Alt.png" ;;
+            esac
+          done
+
           echo "=== Downloaded 3D art files ==="
-          ls -la
-          if [ "$(ls -A)" == "" ]; then
-            echo "ERROR: No 3D art files downloaded! Check that release 'tlo-models-v1' exists with TLO_MODEL_*.png files."
+          ls -la "assets/images/3d-art/the-last-outcome/"
+          if [ "$(ls -A assets/images/3d-art/the-last-outcome/)" == "" ]; then
+            echo "ERROR: No 3D art files downloaded! Check that release 'tlo-models-v1' exists on concept-art-assets."
             exit 1
           fi
 
