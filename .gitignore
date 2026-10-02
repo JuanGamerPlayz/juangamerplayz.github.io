@@ -2,6 +2,7 @@
 # These images are NOT in the public repo
 assets/images/concept-art/
 assets/images/ui-ux/
+assets/images/3d-art/
 
 # OS files
 .DS_Store

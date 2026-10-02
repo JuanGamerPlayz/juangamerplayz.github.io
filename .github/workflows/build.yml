@@ -67,11 +67,25 @@ jobs:
             -p "CC_*.png"
           ls -la
 
+      - name: Download protected 3D Art assets - The Last Outcome - Models
+        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
+        run: |
+          mkdir -p "assets/images/3d-art/the-last-outcome"
+          cd "assets/images/3d-art/the-last-outcome"
+          gh release download tlo-models-v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "TLO_MODEL_*.png"
+          ls -la
+
       - name: Remove protected assets gitignore entries for deployment
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         run: |
           sed -i '/assets\/images\/concept-art\//d' .gitignore
           sed -i '/assets\/images\/ui-ux\//d' .gitignore
+          sed -i '/assets\/images\/3d-art\//d' .gitignore
 
       - name: Deploy to GitHub Pages
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
