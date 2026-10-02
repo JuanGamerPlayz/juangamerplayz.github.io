@@ -69,7 +69,6 @@ jobs:
 
       - name: Download protected 3D Art assets - The Last Outcome - Models
         if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
-        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
@@ -78,7 +77,12 @@ jobs:
           gh release download tlo-models-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
             -p "TLO_MODEL_*.png"
+          echo "=== Downloaded 3D art files ==="
           ls -la
+          if [ "$(ls -A)" == "" ]; then
+            echo "ERROR: No 3D art files downloaded! Check that release 'tlo-models-v1' exists with TLO_MODEL_*.png files."
+            exit 1
+          fi
 
       - name: Remove protected assets gitignore entries for deployment
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
