@@ -150,6 +150,8 @@ body:not(.classicmode) {
     --home-star-strong: rgba(3, 3, 3, 0.34);
     --home-hero-bg: #f1efec;
     --home-about-bg: #fffdf9;
+    --home-hero-text: #030303;
+    --home-hero-muted: #45423e;
 }
 
 body.darktheme:not(.classicmode) {
@@ -158,6 +160,8 @@ body.darktheme:not(.classicmode) {
     --home-star-strong: rgba(241, 239, 236, 0.3);
     --home-hero-bg: #101010;
     --home-about-bg: #181818;
+    --home-hero-text: #F1EFEC;
+    --home-hero-muted: #e8e5e0;
 }
 
 /* Portfolio styles moved to portfolio.css */
@@ -206,11 +210,11 @@ body.darktheme:not(.classicmode) .home-hero {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(3, 3, 3, 0.12), transparent 45%, rgba(3, 3, 3, 0.18));
+    background: linear-gradient(180deg, rgba(241, 239, 236, 0.72), rgba(241, 239, 236, 0.58) 45%, rgba(241, 239, 236, 0.78));
 }
 
 body.darktheme:not(.classicmode) .home-hero__scrim {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 45%, rgba(0, 0, 0, 0.38));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.42) 45%, rgba(0, 0, 0, 0.62));
 }
 
 .home-hero > :not(.home-hero__scrim) {
@@ -223,6 +227,7 @@ body.darktheme:not(.classicmode) .home-hero__scrim {
     margin: 0 auto;
     font-size: clamp(3rem, 9vw, 8rem);
     font-weight: 700;
+    color: var(--home-hero-text);
     letter-spacing: -0.06em;
     line-height: 0.9;
     text-align: center;
@@ -235,12 +240,13 @@ body.darktheme:not(.classicmode) .home-hero__scrim {
     font-weight: 600;
     line-height: 1.35;
     text-align: center;
+    color: var(--home-hero-text);
 }
 
 .home-hero__focus {
     max-width: 620px;
     margin: 22px auto 0;
-    color: var(--home-muted);
+    color: var(--home-hero-muted);
     font-size: 0.88rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -552,11 +558,11 @@ body.darktheme:not(.classicmode) .contact-hero {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(3, 3, 3, 0.12), transparent 45%, rgba(3, 3, 3, 0.18));
+    background: linear-gradient(180deg, rgba(241, 239, 236, 0.78), rgba(241, 239, 236, 0.66) 45%, rgba(241, 239, 236, 0.84));
 }
 
 body.darktheme:not(.classicmode) .contact-hero__scrim {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 45%, rgba(0, 0, 0, 0.38));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.42) 45%, rgba(0, 0, 0, 0.62));
 }
 
 .contact-hero > :not(.contact-hero__scrim) {
@@ -573,11 +579,11 @@ body.darktheme:not(.classicmode) .contact-hero__scrim {
     line-height: 0.9;
     text-align: center;
     white-space: nowrap;
-    color: var(--light-page-text);
+    color: var(--home-hero-text);
 }
 
 body.darktheme:not(.classicmode) .contact-hero h1 {
-    color: var(--dark-page-text);
+    color: var(--home-hero-text);
 }
 
 .contact-about {
