@@ -73,7 +73,7 @@ jobs:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
           mkdir -p "assets/images/3d-art/the-last-outcome"
-          gh release download hs-models-v1 \
+          gh release download dp-models-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
             -p "*.zip" \
             -O /tmp/3d-art.zip
@@ -96,7 +96,7 @@ jobs:
           echo "=== Downloaded The Last Outcome 3D art files ==="
           ls -la "assets/images/3d-art/the-last-outcome/"
           if [ "$(ls -A assets/images/3d-art/the-last-outcome/)" == "" ]; then
-            echo "ERROR: No The Last Outcome 3D art files found. Check that release 'hs-models-v1' exists on concept-art-assets."
+            echo "ERROR: No The Last Outcome 3D art files found. Check that release 'dp-models-v1' exists on concept-art-assets."
             exit 1
           fi
 
@@ -117,6 +117,16 @@ jobs:
           ls -la "assets/images/3d-art/hammer-smasher/"
           if [ "$(ls -A assets/images/3d-art/hammer-smasher/)" == "" ]; then
             echo "ERROR: No Hammer Smasher 3D art files found in 3d-art.zip."
+            exit 1
+          fi
+
+          # Discontinued Project 3D models ship with their final names in the same zip
+          mkdir -p "assets/images/3d-art/discontinued-project"
+          find /tmp/3d-art-extracted -name "DP_Model_*.png" -exec cp {} "assets/images/3d-art/discontinued-project/" \;
+          echo "=== Downloaded Discontinued Project 3D art files ==="
+          ls -la "assets/images/3d-art/discontinued-project/"
+          if [ "$(ls -A assets/images/3d-art/discontinued-project/)" == "" ]; then
+            echo "ERROR: No Discontinued Project 3D art files found in 3d-art.zip."
             exit 1
           fi
 

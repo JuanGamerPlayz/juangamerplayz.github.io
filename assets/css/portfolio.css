@@ -376,6 +376,12 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   background-position: center;
 }
 
+.portfolio-preview--discontinued-project {
+  background-image: url("../images/3d-art/discontinued-project/DP_Model_UGC_Item_Number_1.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .portfolio-preview--chop-and-clock-3d {
   background-image: url("../images/3d-art/chop-and-clock/CC_Model_Table.png");
   background-size: cover;
@@ -435,6 +441,19 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   text-align: center;
   line-height: 1.3;
   margin-top: 4px;
+}
+
+.portfolio-screenshot-tag {
+  opacity: 0.75;
+  font-style: italic;
+}
+
+.portfolio-gallery-note {
+  margin: 12px 0 0;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: var(--modal-text);
+  opacity: 0.8;
 }
 
 .portfolio-screenshot h4 {
