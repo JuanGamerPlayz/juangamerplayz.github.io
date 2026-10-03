@@ -100,6 +100,16 @@ jobs:
             exit 1
           fi
 
+          # Chop & Clock! 3D models ship with their final names in the same zip
+          mkdir -p "assets/images/3d-art/chop-and-clock"
+          find /tmp/3d-art-extracted -name "CC_Model_*.png" -exec cp {} "assets/images/3d-art/chop-and-clock/" \;
+          echo "=== Downloaded Chop & Clock 3D art files ==="
+          ls -la "assets/images/3d-art/chop-and-clock/"
+          if [ "$(ls -A assets/images/3d-art/chop-and-clock/)" == "" ]; then
+            echo "ERROR: No Chop & Clock 3D art files found in 3d-art.zip."
+            exit 1
+          fi
+
       - name: Remove protected assets gitignore entries for deployment
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         run: |
