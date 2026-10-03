@@ -180,8 +180,8 @@ async function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (translations[key]) {
-      const navIcon = el.querySelector(".nav-icon");
-      if (navIcon) {
+      const icon = el.querySelector(".nav-icon, .portfolio-tab-icon");
+      if (icon) {
         const labelNode = Array.from(el.childNodes).find(
           (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
         );
