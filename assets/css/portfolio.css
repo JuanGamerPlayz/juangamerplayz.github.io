@@ -35,6 +35,10 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 }
 
 .portfolio-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   border: 0;
   border-bottom: 2px solid transparent;
   padding: 6px 0;
@@ -43,6 +47,17 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   cursor: pointer;
   font: inherit;
   text-align: center;
+}
+
+.portfolio-tab-icon {
+  display: block;
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.portfolio-tab[hidden] {
+  display: none;
 }
 
 .portfolio-tab.is-active {
@@ -92,6 +107,7 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   background: transparent;
   color: #030303;
   padding: 6px 12px;
+  justify-content: flex-start;
   text-align: left;
   font-weight: 500;
 }
@@ -378,6 +394,12 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 
 .portfolio-preview--discontinued-project {
   background-image: url("../images/3d-art/discontinued-project/DP_Model_UGC_Item_Number_1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-preview--on-hiatus {
+  background-image: url("../images/3d-art/unnamed-project/UP_Model_Bloxy_Cola.png");
   background-size: cover;
   background-position: center;
 }
@@ -757,6 +779,11 @@ body.classicmode .portfolio-discord-link {
   .portfolio-dropdown-toggle {
     width: 100%;
     justify-content: center;
+  }
+
+  .portfolio-tab-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .portfolio-grid {
