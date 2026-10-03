@@ -67,20 +67,20 @@ jobs:
             -p "CC_*.png"
           ls -la
 
-      - name: Download protected 3D Art assets - The Last Outcome - Models
+      - name: Download protected 3D Art assets
         if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
           mkdir -p "assets/images/3d-art/the-last-outcome"
-          gh release download tlo-models-v1 \
+          gh release download cc-models-v1 \
             --repo JuanGamerPlayz/concept-art-assets \
             -p "*.zip" \
             -O /tmp/3d-art.zip
           mkdir -p /tmp/3d-art-extracted
           unzip -o /tmp/3d-art.zip -d /tmp/3d-art-extracted
 
-          # Rename files with TLO_Model_ prefix pattern
+          # Rename The Last Outcome files with TLO_Model_ prefix pattern
           find /tmp/3d-art-extracted -name "*.png" | while read f; do
             base=$(basename "$f" .png)
             case "$base" in
@@ -93,10 +93,10 @@ jobs:
             esac
           done
 
-          echo "=== Downloaded 3D art files ==="
+          echo "=== Downloaded The Last Outcome 3D art files ==="
           ls -la "assets/images/3d-art/the-last-outcome/"
           if [ "$(ls -A assets/images/3d-art/the-last-outcome/)" == "" ]; then
-            echo "ERROR: No 3D art files downloaded! Check that release 'tlo-models-v1' exists on concept-art-assets."
+            echo "ERROR: No The Last Outcome 3D art files found. Check that release 'cc-models-v1' exists on concept-art-assets."
             exit 1
           fi
 
