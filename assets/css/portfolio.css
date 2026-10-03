@@ -371,7 +371,7 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 }
 
 .portfolio-preview--hammer-smasher-3d {
-  background: linear-gradient(135deg, #ff416a 0%, #ff4b2b 50%, #ff9966 100%);
+  background-image: url("../images/3d-art/hammer-smasher/HS_Model_Roblox_HQ.png");
   background-size: cover;
   background-position: center;
 }
