@@ -369,7 +369,7 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 }
 
 .portfolio-preview--hammer-smasher-ui {
-  background: linear-gradient(135deg, #ff416a 0%, #ff4b2b 50%, #ff9966 100%);
+  background-image: url("../images/ui-ux/hammer-smasher/HS_UI_Battle_Round.png");
   background-size: cover;
   background-position: center;
 }
