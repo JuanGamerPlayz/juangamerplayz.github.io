@@ -253,6 +253,8 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
 }
 
 .portfolio-preview {
+  --preview-title-text: var(--light-page-text, #030303);
+  --preview-title-halo: 0 1px 2px var(--light-page-bg, #F1EFEC), 0 0 8px var(--light-page-bg, #F1EFEC), 0 0 18px var(--light-page-bg, #F1EFEC);
   position: relative;
   min-height: 260px;
   display: flex;
@@ -506,6 +508,8 @@ body:not(.classicmode) .portfolio-arrow-icon--classic {
   z-index: 1;
   max-width: 14ch;
   margin: 0;
+  color: var(--preview-title-text);
+  text-shadow: var(--preview-title-halo);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   line-height: 1;
   overflow-wrap: break-word;
