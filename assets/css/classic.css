@@ -292,7 +292,11 @@ body.classicmode .portfolio-preview-label {
   color: #333;
 }
 
-body.classicmode .portfolio-preview h2,
+body.classicmode .portfolio-preview {
+  --preview-title-text: var(--classic-text);
+  --preview-title-halo: 0 1px 2px var(--classic-surface-raised), 0 0 8px var(--classic-surface-raised), 0 0 18px var(--classic-surface-raised);
+}
+
 body.classicmode .portfolio-item-info h2 {
   color: #333;
 }

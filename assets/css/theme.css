@@ -64,6 +64,11 @@ body.darktheme:not(.classicmode) .portfolio-tab.is-active {
   border-bottom-color: var(--dark-page-text);
 }
 
+body.darktheme:not(.classicmode) .portfolio-preview {
+  --preview-title-text: var(--dark-page-text);
+  --preview-title-halo: 0 1px 2px var(--dark-page-bg), 0 0 8px var(--dark-page-bg), 0 0 18px var(--dark-page-bg);
+}
+
 body.darktheme:not(.classicmode) .portfolio-arrow {
   border-color: var(--dark-page-text);
   background: var(--dark-surface);
