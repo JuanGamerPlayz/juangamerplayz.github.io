@@ -31,41 +31,38 @@ jobs:
           unzip -o /tmp/concept-art.zip -d assets/images/concept-art/crypt-hunter/
           ls -la assets/images/concept-art/crypt-hunter/
 
-      - name: Download protected UI/UX assets - Listōu
+      - name: Download protected UI/UX assets
         if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
         env:
           GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
         run: |
+          gh release download ui-ux-designs-v1 \
+            --repo JuanGamerPlayz/concept-art-assets \
+            -p "*.zip" \
+            -O /tmp/ui-ux.zip
+          rm -rf /tmp/ui-ux-extracted
+          unzip -o /tmp/ui-ux.zip -d /tmp/ui-ux-extracted
+
+          # Map the zip's project folder names onto the site's asset folders
           mkdir -p assets/images/ui-ux/listou
-          cd assets/images/ui-ux/listou
-          gh release download listou-v1 \
-            --repo JuanGamerPlayz/concept-art-assets \
-            -p "LT_*.png"
-          ls -la
-
-      - name: Download protected UI/UX assets - The Last Oucome
-        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
-        run: |
           mkdir -p assets/images/ui-ux/the-last-outcome
-          cd assets/images/ui-ux/the-last-outcome
-          gh release download tlo-v1 \
-            --repo JuanGamerPlayz/concept-art-assets \
-            -p "TLO_*.png"
-          ls -la
+          mkdir -p assets/images/ui-ux/chop-and-clock
+          mkdir -p assets/images/ui-ux/hammer-smasher
 
-      - name: Download protected UI/UX assets - Chop & Clock!
-        if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.ART_ASSETS_TOKEN }}
-        run: |
-          mkdir -p "assets/images/ui-ux/chop-and-clock"
-          cd "assets/images/ui-ux/chop-and-clock"
-          gh release download chopclock-v1 \
-            --repo JuanGamerPlayz/concept-art-assets \
-            -p "CC_*.png"
-          ls -la
+          cp -f /tmp/ui-ux-extracted/Listou/*.png assets/images/ui-ux/listou/
+          cp -f "/tmp/ui-ux-extracted/The Last Outcome"/*.png assets/images/ui-ux/the-last-outcome/
+          cp -f "/tmp/ui-ux-extracted/Chop & Clock!"/*.png assets/images/ui-ux/chop-and-clock/
+          cp -f "/tmp/ui-ux-extracted/Hammer Smasher"/*.png assets/images/ui-ux/hammer-smasher/
+
+          echo "=== Downloaded UI/UX files ==="
+          for d in listou the-last-outcome chop-and-clock hammer-smasher; do
+            count=$(ls -1 "assets/images/ui-ux/$d"/*.png 2>/dev/null | wc -l)
+            echo "  $d: $count png"
+            if [ "$count" -eq 0 ]; then
+              echo "ERROR: No UI/UX files for '$d' in ui-ux.zip."
+              exit 1
+            fi
+          done
 
       - name: Download protected 3D Art assets
         if: github.event_name == 'push' || github.event.inputs.download_art == 'true'
