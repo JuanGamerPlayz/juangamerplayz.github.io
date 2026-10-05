@@ -296,12 +296,19 @@ body.darktheme:not(.classicmode) .home-hero__scrim {
     width: 100%;
     min-height: 320px;
     aspect-ratio: 1;
-    border: 3px solid currentColor;
-    background: var(--light-page-bg);
+    border: 3px solid transparent;
+    background: transparent;
 }
 
 body.darktheme:not(.classicmode) .home-about__character {
-    background: var(--dark-surface);
+    background: transparent;
+}
+
+.home-about__character img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .home-skills {
@@ -495,6 +502,7 @@ body.darktheme:not(.classicmode) .home-language {
 
     .home-about__character {
         max-width: 420px;
+        margin-inline: auto;
     }
 
     .home-skills__grid,
@@ -683,14 +691,17 @@ body.darktheme:not(.classicmode) .contact-social__icon {
     aspect-ratio: 1;
     border: 3px solid currentColor;
     background: var(--light-page-bg);
-    background-image: url("../images/contact/character-light.webp");
-    background-size: cover;
-    background-position: center;
+}
+
+.contact-about__character img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 body.darktheme:not(.classicmode) .contact-about__character {
     background: var(--dark-surface);
-    background-image: url("../images/contact/character-dark.webp");
 }
 
 @media (max-width: 760px) {
@@ -718,5 +729,6 @@ body.darktheme:not(.classicmode) .contact-about__character {
 
     .contact-about__character {
         max-width: 420px;
+        margin-inline: auto;
     }
 }
