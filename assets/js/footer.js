@@ -9,6 +9,16 @@ footer.innerHTML = `
 
 document.body.appendChild(footer);
 
+function updateFooterClearance() {
+  document.documentElement.style.setProperty(
+    "--footer-clearance",
+    `${footer.offsetHeight + 12}px`
+  );
+}
+
+updateFooterClearance();
+new ResizeObserver(updateFooterClearance).observe(footer);
+
 function translateFooter() {
   const contactLink = footer.querySelector("[data-i18n]");
   const translatedContact = window.getTranslation?.("footer.contact", "Contact me");
